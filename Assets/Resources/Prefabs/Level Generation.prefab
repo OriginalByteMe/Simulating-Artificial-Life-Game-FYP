@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6798674484921449158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6798674484921449156}
+  - component: {fileID: 6798674484921449157}
+  - component: {fileID: 6798674484921449154}
+  - component: {fileID: 6798674484921449155}
+  - component: {fileID: 6798674484921449153}
+  - component: {fileID: 6886045512147903071}
+  - component: {fileID: 4182139539681432492}
+  - component: {fileID: -4992413854396955517}
+  m_Layer: 0
+  m_Name: Level Generation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6798674484921449156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798674484921449158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.99, y: 68.72, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6798674484921449157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798674484921449158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a024fb95c259046be96937d1ca6b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundTileMap: {fileID: 0}
+  caveTileMap: {fileID: 0}
+  borderTileMap: {fileID: 0}
+  tileMaps: []
+  modifier: 0.105
+  caveTile: {fileID: 11400000, guid: 9b31dc8e12031b34ba29d32e2602c5f2, type: 2}
+  borderTile: {fileID: 11400000, guid: eff53698ba6d41641ba8c6b2c4dea000, type: 2}
+  ground_Tile: {fileID: 11400000, guid: 35efb5c6263a94740b82bc3c114e7133, type: 2}
+  Survive: 0100000002000000030000000400000005000000
+  Birth: 0300000007000000
+  speedOfSim: 0.1
+  SimDuration: 100
+  enemyDatabase: {fileID: 6886045512147903071}
+--- !u!114 &6798674484921449154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798674484921449158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 135744379c378f24e90fd9f83a17c67f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boidPrefab: {fileID: 6056655337375159497, guid: 756fcbef045da3640901d68eeb4003fd, type: 3}
+  spawnLimit: 10
+  members: []
+  bounds: {x: 0, y: 0, z: 0}
+  spawnRadius: 10
+--- !u!114 &6798674484921449155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798674484921449158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b166e1ab8a5e0f4288644e91528e299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxFOV: 180
+  maxAcceleration: 2
+  maxVelocity: 3
+  wanderJitter: 10
+  wanderRadius: 2
+  wanderDistance: 3
+  wanderPriority: 10
+  cohesionRadius: 20
+  cohesionPriority: 60
+  alignmentRadius: 10
+  alignmentPriority: 90
+  separationRadius: 10
+  separationPriority: 90
+  avoidanceRadius: 40
+  avoidancePriority: 700
+  attackRadius: 40
+  attackPriority: 1000
+--- !u!114 &6798674484921449153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798674484921449158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6886045512147903071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798674484921449158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63378e525bd7cce43a23fb1bde9c2acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GolemProbability: 0
+  GolemPlusProabability: 0
+  SlimeProababilty: 0
+  RatPorbability: 0
+  BatProbability: 0
+  RockProbability: 0
+  GolemPrefab: {fileID: 4103984153707069528, guid: 58822acb2eb35f3499b4939120a23ef8, type: 3}
+  GolemPlusPrefab: {fileID: 1773981753064526618, guid: d0c187f9b4fb35440b72e7938e44cb61, type: 3}
+  SlimePrefab: {fileID: 1987973890123929323, guid: 4da04d85a08e00247b0ed89c34113835, type: 3}
+  RatPrefab: {fileID: 3314855478346579190, guid: 08ee8dbb81509f44c90f9e5b7f617229, type: 3}
+  BatPrefab: {fileID: 6840580637031569230, guid: e12bd0f7de7b40d4798acea55ee773e7, type: 3}
+  RockPrefab: {fileID: 6056655337375159497, guid: 756fcbef045da3640901d68eeb4003fd, type: 3}
+  GolemSpawnLimit: 3
+  SlimeSpawnLimit: 3
+  RatSpawnLimit: 3
+  BoidSpawnLimit: 5
+  GolemPlusSpawnLimit: 2
+  golemMembers: []
+  groundMembers: []
+  boidMembers: []
+--- !u!114 &4182139539681432492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798674484921449158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913353a1e17634d408fdae2eab444813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundTile_Probability: 1000
+  ground_Tile: {fileID: 11400000, guid: 35efb5c6263a94740b82bc3c114e7133, type: 2}
+  Iron_Probability: 70
+  Iron_Value: 0
+  Iron_Tile: {fileID: 11400000, guid: b0dc8e6cb296e8440be02523115a2cc5, type: 2}
+  Coppere_Probability: 32
+  Copper_Value: 0
+  Copper_Tile: {fileID: 11400000, guid: da9f9308af0ab9640b735d6ecbe2c4e7, type: 2}
+  Gold_Probability: 18
+  Gold_Value: 0
+  Gold_Tile: {fileID: 11400000, guid: df683dc4c05bae249abd83f72ef92966, type: 2}
+  Diamond_Probability: 22
+  Diamond_Value: 0
+  Diamond_Tile: {fileID: 11400000, guid: 34450559ec042f44e991c19c25bb4c40, type: 2}
+  Emerald_Probability: 11
+  Emerald_Value: 0
+  Emerald_Tile: {fileID: 11400000, guid: 6d36ea9865f8f8943bfcdecfa6c02ae9, type: 2}
+  Ruby_Probability: 0
+  Ruby_Value: 0
+  Ruby_Tile: {fileID: 11400000, guid: 57a0e96c478522b41a36c94059e3744c, type: 2}
+  Fossil_Probability: 0
+  Fossil_Value: 0
+  Fossil_Tile: {fileID: 11400000, guid: 665a78cc218c61447add7c82c77d82fb, type: 2}
+  Energy_Crystal_Probability: 0
+  Energy_Value: 0
+  Energy_Crystal_Tile: {fileID: 11400000, guid: 22c7c80f663981941966456cf657a9c8, type: 2}
+--- !u!114 &-4992413854396955517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798674484921449158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa638ee4a5b62c4ab6fe48e2a398589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 100
+  height: 100
+  smoothness: 10
+  seed: 0
+  modifier: 0.105
+  caveTile: {fileID: 11400000, guid: 9b31dc8e12031b34ba29d32e2602c5f2, type: 2}
+  borderTile: {fileID: 11400000, guid: eff53698ba6d41641ba8c6b2c4dea000, type: 2}
+  perlinHeight: 0
+  enemyDatabase: {fileID: 6886045512147903071}
